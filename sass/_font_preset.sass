@@ -1,0 +1,8 @@
+@for $i from 1 through length($font_maps)
+	$font_map: nth($font_maps, $i)
+	.#{map_get($font_map, name)}
+		font-size: map_get($font_map, size)
+		line-height: map_get($font_map, size)*1.2
+
+.read
+	line-height: 170%

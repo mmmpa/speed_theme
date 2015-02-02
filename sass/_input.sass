@@ -1,0 +1,20 @@
+input[type=text],
+input[type=password],
+textarea,
+select
+	border-radius: $input_radius
+	border: 1px solid $gray
+	outline: none
+	padding: $input_padding
+	position: relative
+	&:focus
+		border-color: $input_focus_color
+		box-shadow: 0 0 4px $input_focus_color
+	&.input-error
+		border-color: $red_dark
+		&:focus
+			box-shadow: 0 0 4px $red_dark
+	&.input-valid
+		border-color: $blue_dark
+		&:focus
+			box-shadow: 0 0 4px $blue_dark

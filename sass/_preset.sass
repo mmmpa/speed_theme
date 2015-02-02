@@ -1,0 +1,19 @@
+@mixin message_layout
+	padding: 5px 10px
+
+.error-message
+	@include message_layout
+	@extend .bg-red
+
+.success-message
+	@include message_layout
+	@extend .bg-blue
+
+.alert-message
+	@include message_layout
+	@extend .bg-yellow
+
+.information-message
+	@include message_layout
+	@extend .bg-gray
+

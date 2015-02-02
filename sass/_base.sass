@@ -1,0 +1,34 @@
+@import "compass/reset"
+
+@import 'mix'
+@import 'size'
+@import 'font'
+@import 'color'
+@import 'font_preset'
+@import 'color_preset'
+@import 'layout'
+@import 'input'
+@import 'preset'
+
+$link_color: $blue
+$h1_color: $black
+$header_color: $black
+$body_color: $black
+
+
+body,
+input,
+textarea,
+select
+	@extend .normal
+	font-family: $font_normal
+	color: $body_color
+	vertical-align: top
+
+body
+	overflow-y: scroll
+
+a
+	text-decoration: none
+	color: $link_color
+

@@ -1,0 +1,51 @@
+@for $i from 1 through length($color_maps)
+	$color_map: nth($color_maps, $i)
+	.text-#{map_get($color_map, name)}
+		color: map_get($color_map, dark)
+	.bg-#{map_get($color_map, name)}
+		color: $white
+		background-color: map_get($color_map, dark)
+	.label-#{map_get($color_map, name)}
+		background-color: map_get($color_map, dark)
+		border-radius: $label-radius
+		color: $white
+		display: inline-block
+		padding: $label-padding
+		vertical-align: middle
+@mixin button_def($height, $color, $color_dark)
+	text-shadow: 0 -1px $color_dark
+	background-color: $color
+	box-shadow: 0 $height $color_dark
+	&:hover,
+	&:focus
+		box-shadow: 0 $height*2 $color_dark
+	&:active,
+	.active
+		top: -$height/2
+		box-shadow: 0 $height $color_dark
+
+.button
+	@extend .normal
+	border: 1px solid transparent
+	border-radius: $button_radius
+	box-sizing: border-box
+	color: $white
+	display: inline-block
+	font-family: $font_normal
+	font-weight: normal
+	margin: 0
+	outline: none
+	padding: $button_padding
+	position: relative
+	text-align: center
+	text-decoration: none
+	top: -$button_height/2
+	&.thin
+		padding: $button_padding_thin
+	&:hover,
+	&:focus
+		top: -$button_height*1.5
+	@for $i from 1 through length($color_maps)
+		$color_map: nth($color_maps, $i)
+		&.#{map_get($color_map, name)}
+			@include button_def($button_height, map_get($color_map, light), map_get($color_map, dark))
