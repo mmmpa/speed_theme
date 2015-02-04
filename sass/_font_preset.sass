@@ -3,6 +3,10 @@
 	.#{map_get($font_map, name)}
 		font-size: map_get($font_map, size)
 		line-height: map_get($font_map, size)*1.2
+	input[type=radio].#{map_get($font_map, name)},
+	input[type=checkbox].#{map_get($font_map, name)}
+		width: map_get($font_map, size)
+		height: map_get($font_map, size)
 
 .read
 	line-height: 170%
