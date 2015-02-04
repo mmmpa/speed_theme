@@ -1,6 +1,9 @@
 @mixin message_layout
 	padding: 5px 10px
 
+@mixin text_layout
+	margin: 5px 0
+
 .error-message
 	@include message_layout
 	@extend .bg-red
@@ -17,3 +20,23 @@
 	@include message_layout
 	@extend .bg-gray
 
+.error-text
+	@include text_layout
+	@extend .text-red
+
+.success-text
+	@include text_layout
+	@extend .text-blue
+
+.alert-text
+	@include text_layout
+	@extend .text-yellow
+
+.information-text
+	@include text_layout
+	@extend .text-gray
+
+.message-list
+	padding-left: 25px
+	> li
+		list-style: square

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/def.css"/>
+</head>
+<body>
+<article class="w400 block-centering">
+  <form action="">
+    <div class="input-box p100">
+      <section class="input-set">
+        <label class="input-head" for="text1">text1</label>
+        <div class="input-body p100"><input type="text" value="valid" id="text1" class="p100"/></div>
+      </section>
+      <section class="input-set">
+        <label class="input-head" for="password">password</label>
+        <div class="input-body p100"><input type="password" value="valid" id="password" class="p100"/></div>
+      </section>
+      <section class="input-set">
+        <label class="input-head" for="test1">error field</label>
+        <div class="input-body p100"><input type="text" value="valid" id="test1" class="p100 input-error"/>
+          <ul class="message-list">
+            <li class="error-text">エラー1</li>
+            <li class="error-text">エラー2</li>
+            <li class="error-text">エラー3</li>
+          </ul>
+        </div>
+      </section>
+      <section class="input-set">
+        <label class="input-head" for="test1">radio group</label>
+        <div class="input-body p100">
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text">label 1</div>
+          </label>
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text">label 2</div>
+          </label>
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text">some label 3</div>
+          </label>
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text">any 4</div>
+          </label>
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text"> 5</div>
+          </label>
+          <label class="radio-label">
+            <div class="radio-input"><input type="radio" name="radio"/></div>
+            <div class="radio-text">label 6</div>
+          </label>
+        </div>
+      </section>
+      <section class="input-set">
+        <label class="input-head" for="test1">checkbox group</label>
+        <div class="input-body p100">
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text">label 1</div>
+          </label>
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text">label 2</div>
+          </label>
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text">some label 3</div>
+          </label>
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text">any 4</div>
+          </label>
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text"> 5</div>
+          </label>
+          <label class="checkbox-label">
+            <div class="checkbox-input"><input type="checkbox" name="checkbox"/></div>
+            <div class="checkbox-text">label 6</div>
+          </label>
+        </div>
+      </section>
+    </div>
+    <ul class="form-button-area">
+      <li><input type="submit" class="button gray" value="Cancel"></li>
+      <li><input type="submit" class="button green" value="Submit"></li>
+    </ul>
+    <ul class="form-button-area">
+      <li><input type="submit" class="button thin red small" value="Clear"></li>
+      <li><input type="submit" class="button green" value="Submit"></li>
+    </ul>
+  </form>
+</article>
+</body>
+</html>

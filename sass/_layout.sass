@@ -1,4 +1,67 @@
 .line-layout
-    >*
-        display: inline-block
+	> *
+		display: inline-block
 
+@for $i from 1 through length($widths)
+	$width: nth($widths, $i)
+	.w#{$width}
+		width: unquote($width+"px")
+
+@for $i from 1 through 20
+	.p#{$i*5}
+		width: unquote(($i*5)+"%")
+
+.block-centering
+	margin-left: auto
+	margin-right: auto
+
+.block-lefting
+	margin-left: 0
+	margin-right: auto
+
+.block-righting
+	margin-left: auto
+	margin-right: 0
+
+.input-box
+	display: table
+
+.input-set
+	display: table-row-group
+
+.input-body,
+.input-head
+	box-sizing: border-box
+	vertical-align: middle
+	display: table-cell
+	padding-top: $input-layout-padding / 2
+	padding-bottom: $input-layout-padding / 2
+
+.input-head
+	white-space: nowrap
+	font-weight: bold
+	padding-right: $input-layout-padding
+
+.form-button-area
+	width: 100%
+	text-align: center
+	margin-top: $input-layout-padding/2
+	margin-bottom: $input-layout-padding/2
+	> *
+		display: inline-block
+		vertical-align: middle
+		margin: $input-layout-padding/2
+
+.checkbox-label,
+.radio-label,
+	display: inline-block
+	white-space: nowrap
+	vertical-align: middle
+	padding-right: $input-layout-padding/2
+
+.checkbox-input,
+.radio-input,
+.checkbox-text,
+.radio-text
+	display: inline-block
+	white-space: nowrap
