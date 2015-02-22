@@ -12,22 +12,8 @@
 		display: inline-block
 		padding: $label-padding
 		vertical-align: middle
-	.border-#{map_get($color_map, name)},
-	table.border-#{map_get($color_map, name)}
+	.border-#{map_get($color_map, name)}
 		border: 1px solid map_get($color_map, dark)
-		th,
-		td
-			border: 1px solid map_get($color_map, dark)
-	table.stripe-#{map_get($color_map, name)} tr:nth-child(2n-1)
-		background-color: map_get($color_map, dark)
-		color: $white
-	table.stripe-light-#{map_get($color_map, name)} tr:nth-child(2n-1)
-		background-color: map_get($color_map, light)
-	table.next-stripe-#{map_get($color_map, name)} tr:nth-child(2n)
-		background-color: map_get($color_map, dark)
-		color: $white
-	table.next-stripe-light-#{map_get($color_map, name)} tr:nth-child(2n)
-		background-color: map_get($color_map, light)
 @mixin button_def($height, $color, $color_dark)
 	text-shadow: 0 -1px $color_dark
 	background-color: $color

@@ -1,3 +1,6 @@
+.break
+	word-wrap: break-word !important
+
 .table-wrapper
 	display: inline-block
 	overflow: hidden
@@ -17,3 +20,42 @@
 		th,
 		td
 			padding: map_get($font_map, size)/3  map_get($font_map, size)/2
+
+@for $i from 1 through length($color_maps)
+	$color_map: nth($color_maps, $i)
+	table.border-#{map_get($color_map, name)}
+		border: 1px solid map_get($color_map, dark)
+		th,
+		td
+			border: 1px solid map_get($color_map, dark)
+	table.stripe-#{map_get($color_map, name)} tr:nth-child(2n-1)
+		background-color: map_get($color_map, dark)
+		color: $white
+	table.stripe-light-#{map_get($color_map, name)} tr:nth-child(2n-1)
+		background-color: map_get($color_map, light)
+	table.next-stripe-#{map_get($color_map, name)} tr:nth-child(2n)
+		background-color: map_get($color_map, dark)
+		color: $white
+	table.next-stripe-light-#{map_get($color_map, name)} tr:nth-child(2n)
+		background-color: map_get($color_map, light)
+
+
+table.horizontal-border
+	border-width: 1px 0
+	tr
+		td,
+		th
+			border-width: 1px 0
+
+table.top
+	th,
+	td
+		vertical-align: top
+table.middle
+	th,
+	td
+		vertical-align: middle
+table.bottom
+	th,
+	td
+		vertical-align: bottom
